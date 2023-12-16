@@ -4,9 +4,14 @@
 // @version      1.7
 // @description  Automatically navigate through images and videos with keyboard on an image board
 // @author       Anonymous
+// @source       https://github.com/Vastanonyymi/vastalauta-userscript/
 // @match        https://vastalauta.org/*/*
 // @grant        none
 // ==/UserScript==
+
+
+//Vasemmalla ja oikealla nuolinäppäimellä saat kuvat isoksi ja selatuksi langan tiedostot läpi. Yritin tehdä tästä semmosta "avaa kaikki" napin korviketta. 
+
 
 (function() {
     'use strict';
@@ -51,14 +56,14 @@
         } else {
             currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image if at the end
         }
-        setTimeout(() => simulateClick(images[currentIndex]), 300); // Delay to allow modal to close
+        setTimeout(() => simulateClick(images[currentIndex]), 30); // Delay to allow modal to close
     }
 
     // Function to navigate to the previous image
     function prevImage() {
         closeModal(); // Close current modal
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        setTimeout(() => simulateClick(images[currentIndex]), 300); // Delay to allow modal to close
+        setTimeout(() => simulateClick(images[currentIndex]), 30); // Delay to allow modal to close
     }
 
     // Function to handle arrow key navigation
