@@ -4,9 +4,12 @@
 // @version      1.1
 // @description  Show post IDs next to the timestamps on posts
 // @author       Anonymous
+// @source       https://github.com/Vastanonyymi/vastalauta-userscript/
 // @match        https://vastalauta.org/*/*
 // @grant        none
 // ==/UserScript==
+
+//tää laittaa viestien postausnumerot timestamppien viereen. jos ei toimi niin paina f5 ja toivo parasta tai sitte korjaa itte
 
 (function() {
     'use strict';
