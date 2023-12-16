@@ -1,1 +1,1 @@
-Pari tommosta userscriptiä vastalaudan parantamiseksi
+Pari tommosta userscriptiä vastalaudan parantamiseksi, saattaapi olla bugisia ja paskoja.
