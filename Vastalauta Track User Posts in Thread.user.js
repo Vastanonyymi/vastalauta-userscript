@@ -4,9 +4,14 @@
 // @version      1.2
 // @description  Track and navigate through a specific user's posts in a thread
 // @author       Anonymous
+// @source       https://github.com/Vastanonyymi/vastalauta-userscript/
 // @match        https://vastalauta.org/*/*
 // @grant        none
 // ==/UserScript==
+
+
+//Tän on tarkotus olla kuin ylilaudan se että kun klikkaat ID:tä, voit hyppiä tietyn tyypin viesteissä edestakas. Tässä vaan pitää klikata nimeä ja ainakin toistaseks grafiikat unohtu
+
 
 (function() {
     'use strict';
