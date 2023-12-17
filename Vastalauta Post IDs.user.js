@@ -81,6 +81,3 @@
     insertPostIDs();
     observer.observe(bodyTarget, observerConfig);
 })();
-    // Run the function when the page loads and also when new posts are dynamically added if needed
-    window.addEventListener('load', insertPostIDs);
-})();
