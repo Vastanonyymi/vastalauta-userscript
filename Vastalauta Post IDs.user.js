@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Vastalauta Post IDs
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.41
 // @description  Show post IDs next to the timestamps on posts
 // @author       Anonymous
 // @source       https://github.com/Vastanonyymi/vastalauta-userscript/
