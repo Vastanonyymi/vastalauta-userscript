@@ -5,7 +5,7 @@
 // @description  Show post IDs next to the timestamps on posts
 // @author       Anonymous
 // @source       https://github.com/Vastanonyymi/vastalauta-userscript/
-// @match        https://vastalauta.org/*/*
+// @match        https://vastalauta.org/*
 // @grant        none
 // ==/UserScript==
 
