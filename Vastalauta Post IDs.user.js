@@ -10,10 +10,6 @@
 // @run-at       document-start
 // ==/UserScript==
 
-//Korjattu: urlit joiden perässä oli numero esim /b/123#1234 aiheutti scriptin toimimattomuuden
-//Korjattu: kataloginäkymään id:t myös
-//Korjattu: memory leak
-
 (function() {
     'use strict';
 
