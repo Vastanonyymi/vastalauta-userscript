@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Vastalauta File Navigation for Mobile
 // @namespace    http://tampermonkey.net/
-// @version      3.11
+// @version      3.12
 // @description  Navigate through images and videos with touch on Vastalauta, and scroll to the thumbnail upon closing a modal. Supports long press for context menu.
 // @author       Anonymous
 // @source       https://github.com/Vastanonyymi/vastalauta-userscript/
 // @match        https://vastalauta.org/*
 // @match        https://vastalauta.org/*/*
 // @grant        none
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
