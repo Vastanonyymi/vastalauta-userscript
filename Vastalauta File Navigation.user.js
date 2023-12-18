@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Vastalauta File Navigation
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  Automatically navigate through images and videos with keyboard on an image board
 // @author       Anonymous
 // @match        https://vastalauta.org/*
 // @match        https://vastalauta.org/*/*
 // @grant        none
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
