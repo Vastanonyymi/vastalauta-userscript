@@ -11,10 +11,6 @@
 // @run-at       document-start
 // ==/UserScript==
 
-
-//Tän on tarkotus olla kuin ylilaudan se että kun klikkaat ID:tä, voit hyppiä tietyn tyypin viesteissä edestakas. Tässä vaan pitää klikata nimeä ja ainakin toistaseks grafiikat unohtu
-//uus päivitys paljon parempaa koodia nytten pitäis toimia oikeasti ja tehokkaasti
-
 (function() {
     'use strict';
 
