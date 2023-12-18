@@ -1,19 +1,15 @@
 // ==UserScript==
 // @name         Vastalauta Track User Posts mobile
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  Track and navigate through a specific user's posts in a thread
 // @author       Anonymous
 // @source       https://github.com/Vastanonyymi/vastalauta-userscript/
 // @match        https://vastalauta.org/*
 // @match        https://vastalauta.org/*/*
 // @grant        none
-// @run-at       document-idle
+// @run-at       document-start
 // ==/UserScript==
-
-
-//Tän on tarkotus olla kuin ylilaudan se että kun klikkaat ID:tä, voit hyppiä tietyn tyypin viesteissä edestakas. Tässä vaan pitää klikata nimeä ja ainakin toistaseks grafiikat unohtu
-//uus päivitys paljon parempaa koodia nytten pitäis toimia oikeasti ja tehokkaasti
 
 (function() {
     'use strict';

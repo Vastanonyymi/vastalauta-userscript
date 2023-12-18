@@ -1,17 +1,14 @@
 // ==UserScript==
 // @name         Vastalauta Post IDs
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.51
 // @description  Show post IDs next to the timestamps on posts
 // @author       Anonymous
 // @source       https://github.com/Vastanonyymi/vastalauta-userscript/
 // @match        https://vastalauta.org/*
 // @grant        none
+// @run-at       document-start
 // ==/UserScript==
-
-//Korjattu: urlit joiden perässä oli numero esim /b/123#1234 aiheutti scriptin toimimattomuuden
-//Korjattu: kataloginäkymään id:t myös
-//Korjattu: memory leak
 
 (function() {
     'use strict';
