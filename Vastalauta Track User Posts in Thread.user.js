@@ -8,12 +8,8 @@
 // @match        https://vastalauta.org/*
 // @match        https://vastalauta.org/*/*
 // @grant        none
-// @run-at       document-idle
+// @run-at       document-start
 // ==/UserScript==
-
-
-//Tän on tarkotus olla kuin ylilaudan se että kun klikkaat ID:tä, voit hyppiä tietyn tyypin viesteissä edestakas. Tässä vaan pitää klikata nimeä ja ainakin toistaseks grafiikat unohtu
-//uus päivitys, paljon parempaa koodia nytten pitäis toimia enemmän kuin 30% ajasta ja paljon tehokkaammin.
 
 (function() {
     'use strict';
