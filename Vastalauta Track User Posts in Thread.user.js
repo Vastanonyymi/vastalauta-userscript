@@ -1,17 +1,19 @@
 // ==UserScript==
 // @name         Vastalauta Track User Posts in Thread
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      2.0
 // @description  Track and navigate through a specific user's posts in a thread
 // @author       Anonymous
 // @source       https://github.com/Vastanonyymi/vastalauta-userscript/
+// @match        https://vastalauta.org/*
 // @match        https://vastalauta.org/*/*
 // @grant        none
+// @run-at document-idle
 // ==/UserScript==
 
 
 //Tän on tarkotus olla kuin ylilaudan se että kun klikkaat ID:tä, voit hyppiä tietyn tyypin viesteissä edestakas. Tässä vaan pitää klikata nimeä ja ainakin toistaseks grafiikat unohtu
-
+//uus päivitys, paljon parempaa koodia nytten pitäis toimia enemmän kuin 30% ajasta ja paljon tehokkaammin.
 
 (function() {
     'use strict';
@@ -69,7 +71,7 @@
         currentUserPosts = Array.from(document.querySelectorAll(`[data-name="${username}"]`));
         currentIndex = currentUserPosts.findIndex(post => post.contains(postElement));
 
-        infoText.textContent = `Post ${currentIndex + 1} of ${currentUserPosts.length}`; // Display post count
+        infoText.textContent = `Post ${currentIndex + 1} of ${currentUserPosts.length}`;
 
         const prevButton = document.getElementById('userOverlayPrevButton');
         const nextButton = document.getElementById('userOverlayNextButton');
@@ -77,38 +79,78 @@
         prevButton.onclick = function() {
             if (currentIndex > 0) {
                 currentIndex--;
-                const newPostElement = currentUserPosts[currentIndex];
-                newPostElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                positionOverlay(newPostElement);
-                infoText.textContent = `Post ${currentIndex + 1} of ${currentUserPosts.length}`; // Update post count
+            } else {
+                currentIndex = currentUserPosts.length - 1; // Wrap around to the last post
             }
+            const newPostElement = currentUserPosts[currentIndex];
+            newPostElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            positionOverlay(newPostElement);
+            infoText.textContent = `Post ${currentIndex + 1} of ${currentUserPosts.length}`;
         };
 
         nextButton.onclick = function() {
             if (currentIndex < currentUserPosts.length - 1) {
                 currentIndex++;
-                const newPostElement = currentUserPosts[currentIndex];
-                newPostElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                positionOverlay(newPostElement);
-                infoText.textContent = `Post ${currentIndex + 1} of ${currentUserPosts.length}`; // Update post count
+            } else {
+                currentIndex = 0; // Wrap around to the first post
             }
+            const newPostElement = currentUserPosts[currentIndex];
+            newPostElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            positionOverlay(newPostElement);
+            infoText.textContent = `Post ${currentIndex + 1} of ${currentUserPosts.length}`;
         };
 
         userOverlay.style.display = 'block';
-        positionOverlay(postElement); // Position overlay when shown
+        positionOverlay(postElement);
     }
 
-    function attachEventListeners() {
-        const usernames = document.querySelectorAll('.post__username');
-        usernames.forEach(username => {
-            username.style.cursor = 'pointer';
-            username.addEventListener('click', function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                showUserOverlay(username.textContent, username.closest('.post'));
-            });
+
+    function handleDocumentClick(event) {
+        const username = event.target.closest('.post__username');
+        if (username) {
+            event.preventDefault(); // Prevents default action (e.g., opening a reply box)
+            event.stopPropagation();
+            showUserOverlay(username.textContent, username.closest('.post'));
+        }
+    }
+
+    function setupEventDelegation() {
+        // Attach the event listener in the capturing phase
+        document.body.addEventListener('click', handleDocumentClick, true);
+    }
+
+    function applyCustomStyles() {
+        const style = document.createElement('style');
+        style.textContent = `
+            .post__username {
+                cursor: pointer; /* Change cursor to indicate interactivity */
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    function setup() {
+        setupEventDelegation();
+        applyCustomStyles();
+    }
+
+    function checkAndInitialize() {
+        if (!userOverlay) {
+            setup();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', setup);
+
+    // MutationObserver to monitor dynamically loaded content
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.addedNodes.length) {
+                checkAndInitialize();
+            }
         });
-    }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
 
-    window.addEventListener('load', attachEventListeners);
+    // Fail-safe initialization after a delay
+    //setTimeout(checkAndInitialize, 5000); // Adjust the delay as needed
 })();
