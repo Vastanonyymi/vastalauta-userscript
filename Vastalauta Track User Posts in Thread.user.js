@@ -8,7 +8,7 @@
 // @match        https://vastalauta.org/*
 // @match        https://vastalauta.org/*/*
 // @grant        none
-// @run-at document-idle
+// @run-at       document-idle
 // ==/UserScript==
 
 
