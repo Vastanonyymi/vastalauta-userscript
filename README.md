@@ -7,3 +7,4 @@ Kokoelma userscriptejä Vastalauta-sivuston käyttökokemuksen parantamiseksi. H
 - **[Viestien Numerointi](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/Vastalauta%20Post%20IDs.user.js):** Tuo viestien numerot Vastalaudalle. Ja eikun gettailemaan.
 - **[Kuvien Selaus Näppäimistöllä](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/Vastalauta%20File%20Navigation.user.js):** Mahdollistaa kuvien ja videoiden selaamisen nuolinäppäimillä.
 - **[Kuvien Kosketusnavigointi](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/Vastalauta%20File%20Navigation%20for%20Mobile.user.js):** Kosketuseleillä kuvien ja videoiden selaaminen mobiililaitteilla.
+- **[Timestampit suomalaiseen muotoon](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/vastalauta%20Finnish%20timestamps.user.js):** Korjaa jenkkityyliset timestampit. Toimii vain jos olet laittanut asetuksista timestampit päälle!
