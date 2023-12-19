@@ -8,3 +8,4 @@ Kokoelma userscriptejä Vastalauta-sivuston käyttökokemuksen parantamiseksi. H
 - **[Kuvien Selaus Näppäimistöllä](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/Vastalauta%20File%20Navigation.user.js):** Mahdollistaa kuvien ja videoiden selaamisen nuolinäppäimillä.
 - **[Kuvien Kosketusnavigointi](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/Vastalauta%20File%20Navigation%20for%20Mobile.user.js):** Kosketuseleillä kuvien ja videoiden selaaminen mobiililaitteilla.
 - **[Timestampit suomalaiseen muotoon](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/Vastalauta%20Finnish%20timestamps.user.js):** Korjaa jenkkityyliset timestampit. Toimii vain jos olet laittanut asetuksista timestampit päälle!
+- **[Middle click tiedostojen avaus](https://github.com/Vastanonyymi/vastalauta-userscript/raw/main/Vastalauta%20middle%20click%20image%20in%20a%20new%20tab.user.js):** Avaa tiedostot uuteen tabiin painamalla hiiren rullaa.
