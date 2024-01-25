@@ -1,3 +1,7 @@
+## TÄTÄ EI PÄIVITETÄ ENÄÄ. VASTALAUTAA EI SCRIPTEILLÄ KORJATA.
+
+
+
 ## Vastalauta Yhdistetty Userscript
 
 Tämä repositorio sisältää yhdistetyn userscriptin, jonka tarkoituksena on parantaa käyttökokemusta Vastalauta-sivustolla. Skripti yhdistää useita hyödyllisiä toimintoja yhdeksi kattavaksi kokonaisuudeksi, mikä tekee Vastalauta-kokemuksesta sujuvamman ja monipuolisemman.
